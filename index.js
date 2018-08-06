@@ -158,6 +158,11 @@ var WizardForm = function (_React$Component) {
                     elements: newElements
                 });
             }
+            if (this.state.elements.length === this.state.step + 1) {
+                if (this.props.onEndWizard) {
+                    this.props.onEndWizard();
+                }
+            }
         }
     }, {
         key: 'previousStep',

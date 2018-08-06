@@ -124,6 +124,11 @@ class WizardForm extends React.Component {
             });
 
         }
+        if (this.state.elements.length === this.state.step + 1) {
+          if (this.props.onEndWizard) {
+            this.props.onEndWizard();
+          }
+        }
     }
 
     previousStep(data) {
